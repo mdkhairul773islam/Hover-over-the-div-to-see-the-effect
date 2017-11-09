@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        h2,
+        p {
+            text-align: center;
+        }
+        .container {
+            position: relative;
+            width: 25%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .content {
+            display: block;
+            width: 100%;
+            height: 100%;
+            min-height: 200px;
+            background-color: #111;
+        }
+        .overlay,
+        .overlay1 {
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            right: 0;
+            background-color: #008CBA;
+            overflow: hidden;
+            width: 100%;
+            height: 0;
+            transition: .5s ease;
+        }
+        .overlay1 {
+            top: 0;
+            background-color: red;
+            height: 100%;
+        }
+        .container:hover .overlay,
+        .container:hover .overlay1 {
+            bottom: 0;
+            height: 100%;
+        }
+        .container:hover .overlay1 {
+            top: 100%;
+        }
+        .container:hover {
+            overflow: hidden;
+        }
+        .overlay .text,
+        .overlay1 .text {
+            white-space: nowrap;
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            overflow: hidden;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Slide in Overlay from the Top And Bottom</h2>
+    <p>Hover over the div to see the effect.</p>
+
+    <div class="container">
+        <div class="content"></div>
+        <div class="overlay">
+            <div class="text">Hello World</div>
+        </div>
+        <div class="overlay1">
+            <div class="text">Hello World </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
